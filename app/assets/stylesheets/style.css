@@ -1,0 +1,797 @@
+@font-face {
+	font-family: neuemed;
+	src: url("HelveticaNeueMed.ttf") format("opentype");
+}
+
+@font-face {
+	font-family: neuemed;
+	src: url("HelveticaNeueMed.ttf") format("opentype");
+}
+
+body
+{
+	width:100%;
+	margin:0;
+}
+
+.content
+{
+	
+	
+}
+
+.holder
+{
+	margin:0px auto; 
+	width:1140px
+}
+
+#header
+{
+	background-color:black;
+	height:78px;
+	z-index:50;
+	width:100%;
+	display: block;
+	margin:auto;
+}
+
+#header table
+{
+	width:100%;
+	padding-left:93px;
+	
+}
+
+#header table tr td
+{
+	height: 88px;
+}
+
+#header table tr td a
+{
+	text-transform:uppercase;
+	font-family:neuemed;
+	font-size:14px;
+	color:#d5d1c8;
+	text-decoration:none;
+}
+
+#header table tr td.logo
+{
+	width:132px;
+	background-image:url("logo.png");
+	position: absolute;
+	z-index:2
+}
+
+#avonstage
+{
+	height:751px;
+	background-color:#000000;
+}
+
+.stage
+{
+	width:1140px;
+	height: 496px;
+	position:absolute; 
+	z-index:1;
+	background-image:url("stage.jpg");
+	background-repeat: no-repeat;
+}
+
+.lg2
+{
+	width: 424px;
+	height: 216px;
+	position:absolute; 
+	z-index:3;
+	margin: 135px 0px 0px 370px;
+	background-image:url("lg2.png");
+	background-repeat: no-repeat;
+}
+
+.band
+{
+	width:1140px;
+	height: 259px;
+	position:absolute; 
+	z-index:4;
+	margin: 251px 0px 0px 0px;
+	background-image:url("band.png");
+	background-repeat: no-repeat;
+}
+
+.handwithbottle
+{
+	width: 384px;
+	height: 449px;
+	position: absolute;
+	z-index: 7;
+	margin: 109px 0px 0px 596px;
+	background-image: url("handwithbottle.png");
+	background-repeat: no-repeat;
+}
+
+.black
+{
+	width:1140px;
+	height: 216px;
+	position:absolute; 
+	z-index:5;
+	margin: 470px 0px 0px 0px;
+	background-image:url("black.png");
+	background-repeat: no-repeat;
+}
+
+.button
+{
+	width:355px;
+	height: 216px;
+	position:absolute; 
+	z-index:3;
+	margin: 625px 0px 0px 422px;
+	background-image:url("button.png");
+	background-repeat: no-repeat;
+}
+
+#avonstage p
+{
+	z-index: 6;
+	color: #d5d1c8;
+	position: absolute;
+	width: 552px;
+	text-align: center;
+	font-family: neuemed;
+	margin: 491px 0px 0px 327px;
+	font-size: 14px;
+}
+
+#charities
+{
+	height:680px;
+	background-color:#d5d1c8;
+}
+
+#charities p
+{
+	margin: 219px 204px;
+	width: 763px;
+	text-align: center;
+	color: #746c5e;
+	position: absolute;
+	font-family: neuemed;
+	font-size: 14px;
+	line-height: 2em;
+}
+
+#charities p.homefront
+{
+	position: relative;
+	margin: 0px 417px;
+	width: 300px;
+	font-family: neuemed;
+}
+
+#charities  p.bbbsisterstext 
+{
+	margin: 0px 417px;
+	width: 300px;
+	font-family: neuemed;
+	position: relative;
+}
+
+.leftcloud
+{
+	width: 900px;
+	height: 678px;
+	background-image:url("leftcloud.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	margin-left: -400px;
+}
+
+.rightcloud
+{
+	width: 492px;
+	height: 678px;
+	background-image: url("rightcloud.png");
+	background-repeat: no-repeat;
+	background-position: -185px 108px;
+	position: absolute;
+	margin-left: 800px;
+}
+
+.giveback
+{
+	width: 457px;
+	height: 316px;
+	margin: 83px 0px 0px 331px;
+	background-image: url("giveback.png");
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
+.bird
+{
+	width: 377px;
+	height: 432px;
+	margin-left: 750px;
+	margin-top: 248px;
+	background-image: url("bird.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 40;
+}
+
+.birdtest
+{
+width: 377px;
+	height: 432px;
+	
+	background-image: url("bird.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 100;
+
+}
+
+.ophomefront
+{
+	width:252px;
+	height:167px;
+	background-image:url("homefront.png");
+	background-repeat: no-repeat;
+	margin-left: 444px;
+	margin-top: 300px;
+	position: relative;
+	z-index:10;
+}
+
+.bbbsisters
+{
+	width:410px;
+	height:134px;
+	background-image:url("bbbsisters.png");
+	background-repeat: no-repeat;
+	margin-left: 349px;
+	margin-top: 291px;
+	position: relative;
+	z-index:10;
+}
+
+#goldenticket
+{
+	height:678px;
+	background-color:#8e0835;
+	background-image:url("bubbles1.png");
+	z-index:5;
+}
+
+.bubbles
+{
+	width:1140px;
+	height:678px;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index:10;
+} 
+
+.bubble1
+{
+	background-image:url("bubbles1.png");
+	z-index:20;
+}
+
+.bubble2
+{
+	background-image:url("bubbles2.png");
+	z-index:20;
+}
+
+.bubble3
+{
+	background-image:url("bubbles3.png");
+	z-index:20;
+}
+
+.bubble4
+{
+	background-image:url("bubbles4.png");
+	z-index:20;
+}
+
+.oval
+{
+	width:710px;
+	height: 515px;
+	position:absolute;
+	background-image:url("oval.png");
+	background-repeat: no-repeat;
+	z-index:30;
+	margin-left: 221px;
+	margin-top: 107px;
+}
+
+#cwsection
+{
+	height:680px;
+	background-color:#a7a095;
+}
+
+#cwsection p
+{
+	width: 453px;
+	color: #000000;
+	text-align: center;
+	margin-left: 190px;
+	margin-top: 302px;
+	position: absolute;
+	z-index: 10;
+	font-family: neuemed;
+	font-size: 17px;
+	line-height: 1.4em;
+}
+
+.topcord
+{
+	width:325px;
+	height:398px;
+	background-image:url("topcord.png");
+	background-repeat: no-repeat;
+	background-position: -8px -55px;
+	position: absolute;
+	z-index:10;
+	margin-left:100px;
+}
+
+.cheerwineheader
+{
+	width:380px;
+	height:96px;
+	background-image:url("cheerwineheader.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index:10;
+	margin-left: 231px;
+	margin-top: 189px;
+}
+
+.zig1
+{
+	width: 100%;
+	height: 681px;
+	background-image: url("zig1n.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 5;
+}
+
+.zig2
+{
+	width:100%;
+	height:681px;
+	background-image:url("zig2n.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index:5;
+}
+
+.bottle
+{
+	width:248px;
+	height:666px;
+	background-image:url("bottle.png");
+	background-repeat: no-repeat;
+	background-position: 1px 102px;
+	position: absolute;
+	z-index:10;
+	margin-left: 784px;
+	margin-top: 14px;
+}
+
+.botcord
+{
+	width: 557px;
+	height: 245px;
+	background-image: url("botcord.png");
+	background-repeat: no-repeat;
+	background-position: 1px -10px;
+	position: absolute;
+	z-index: 5;
+	margin-top: 435px;
+	margin-left: 588px;
+}
+
+#avettbros
+{
+	height:681px;
+	background-color:#c6c0b8;
+}
+
+#avettbros p 
+{
+	width: 455px;
+	text-align: center;
+	color: #000000;
+	margin-left: 590px;
+	margin-top: 102px;
+	position: absolute;
+	z-index: 10;
+	font-family: neuemed;
+	font-size:16px;
+	line-height:1.4em
+	
+}
+
+.avettbrossbg
+{
+	width:100%;
+	height: 681px;
+	background-image: url("abbg.png");
+	position: absolute;
+	z-index: 5;
+}
+
+.abband
+{
+	width: 680px;
+	height: 318px;
+	background-image: url("abband.png");
+	background-repeat: no-repeat;
+	margin-left: 445px;
+	position: absolute;
+	z-index: 10;
+	margin-top: 363px;
+	
+}
+
+.abrightzig
+{
+	width: 259px;
+	height: 680px;
+	background-image: url("abrightzig.png");
+	background-repeat: no-repeat;
+	background-position: -110px -11px;
+	position: absolute;
+	z-index: 7;
+	margin-left: 78%;
+}
+
+.abshadow
+{
+	width: 797px;
+	height: 681px;
+	background-image: url("abshadow.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 5;
+	margin-left: 343px;
+	margin-top: 0px;
+}
+
+.abrightredzig
+{
+	width: 247px;
+	height: 681px;
+	background-image: url("abrightredzig.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 7;
+	background-position: -110px -11px;
+	margin-left: 356px;
+}
+
+.ableftredzig
+{
+	width: 247px;
+	height: 681px;
+	background-image: url("ableftredzig.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 7;
+	background-position: -110px -11px;
+	margin-left: 6px;
+}
+
+.abredtexture
+{
+	width: 563px;
+	height: 681px;
+	background-image: url("abredtexture.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 5;
+	margin-left: 25px;
+}
+
+.avettbrostitle
+{
+	width: 299px;
+	height: 229px;
+	background-image: url("avettbrostitle.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 6;
+	margin-left: 186px;
+	margin-top: 127px;
+}
+
+#merch
+{
+	height:681px;
+	background-color:#000000;
+}
+
+#merch p
+{
+	text-align: center;
+	margin-left: 566px;
+	margin-top: 402px;
+	position: absolute;
+	z-index: 10;
+	width:475px;
+	color:#d5d1c8;
+	font-family: neuemed;
+	font-size:16px;
+	line-height:1.4em;
+}
+
+
+.legendarygivebackbg
+{
+	width: 100%;
+	height: 681px;
+	background-image: url("legendarygivebackbg.png");
+	background-repeat: no-repeat;
+	background-position: -27px -171px;
+	position: absolute;
+	z-index: 5;
+}
+
+.mechtshirt
+{
+	width: 452px;
+	height: 454px;
+	background-image: url("mechtshirt.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 7;
+	margin-left: 91px;
+	margin-top: 133px;
+}
+
+.lggivebacktitle
+{
+	width: 475px;
+	height: 123px;
+	background-image: url("lggivebacktitle.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 7;
+	margin-left: 565px;
+	margin-top: 252px;
+}
+
+#footer
+{
+	height:553px;
+	background-color:#d5d1c8;
+}
+
+#footer p
+{
+	text-align: center;
+	margin-left: 399px;
+	margin-top: 78px;
+	position: absolute;
+	z-index: 10;
+	width: 671px;
+	color: #000000;
+	font-size:19px;
+	font-family: neuemed;
+}
+#footer p.title
+{
+	color: #8e0835;
+	margin-top: 40px;
+	font-weight: bold;
+	font-size:26px;
+}
+
+.twoliter
+{
+	width: 298px;
+	height: 342px;
+	background-image: url("2liter.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 7;
+	margin-left: 773px;
+	margin-top: 181px;
+}
+
+.twelvepack
+{
+	width: 298px;
+	height: 342px;
+	background-image: url("12pack.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 7;
+	margin-left: 365px;
+	margin-top: 181px;
+}
+
+.pick
+{
+	width:152px;
+	height:128px;
+	margin-top:500px;
+	margin-left:60px;
+	background-repeat: no-repeat;
+	position:absolute;
+	z-index:30;
+	cursor:pointer
+}
+
+#pledge
+{
+	background-image: url("pledgepick.png");
+}
+
+#twitter
+{
+	background-image: url("twitterpick.png");
+}
+
+#visit
+{
+	background-image: url("visitpick.png");
+}
+
+#play
+{
+	background-image: url("playpick.png");
+}
+
+#shop
+{
+	background-image: url("shoppick.png");
+}
+
+#likeenter
+{
+	background-image: url("likeenterpick.png");
+	margin-top: 407px;
+}
+
+#container 
+{
+	margin-left:100px;
+	display: inline-block;
+	width: 37px;
+	margin-top:750px;
+	position:absolute;
+	z-index: 20;
+	height:3377px;
+}
+
+#container2
+{
+	margin-left: 109px;
+	display: inline-block;
+	width: 480px;
+	margin-top: 148px;
+	position: absolute;
+	z-index: 20;
+	height: 603px;
+}
+
+#container3
+{
+	margin-left: 470px;
+	display: inline-block;
+	width: 384px;
+	margin-top: 114px;
+	position: absolute;
+	z-index: 20;
+	height: 449px;
+}
+
+.sodainglassempty
+{
+	width: 436px;
+	height: 540px;
+	background-image: url("CheerwineGlass_empty.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 30;
+	margin-left: 71px;
+}
+
+.sodainglassfull
+{
+	width: 436px;
+	height: 540px;
+	background-image: url("CheerwineGlass_full.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 30;
+	margin-left: 71px;
+}
+
+/** Swipe */
+
+.swipe {
+	overflow: hidden;
+	visibility: hidden;
+	position: relative;
+	margin: auto;
+	width: 100%;
+}
+.swipe-wrap {
+	overflow: hidden;
+	position: relative;
+}
+.swipe-wrap > div {
+	float:left;
+	width:100%;
+	position: relative;
+}
+
+
+
+#slidebuttons {
+	width:155px;
+	text-align: center;
+	margin-top: 23px;
+	position: relative;
+	margin-left: 450px;
+}
+
+#slidebuttons ul {
+	position: absolute;
+	width: 100%;
+	margin-top: -8px;
+}
+
+#slidebuttons ul li {
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	width: 21px;
+	height: 21px;
+	background-image:url("navbullet.png");
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#slidebuttons ul li.active {
+	background-image:url("navbulletactive.png");
+}
+
+#slidebuttons h5 {
+	font-size: 20px;
+	color: #33383f;
+	font-weight: 200;
+	margin: 24px auto 32px auto;
+	font-family: 'proxima_regular';
+}
+
+#pledgeformtable tr>td
+{
+	padding-top: 0.5em;
+}
+
+#formtable tr>td
+{
+	padding-top: 0.5em;
+}
+
+
+
+
+

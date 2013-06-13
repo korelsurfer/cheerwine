@@ -1,0 +1,547 @@
+<html>
+	<head>
+		<title>Cheerwine</title>
+		<link rel="stylesheet" href="style/style.css?version=2" media="screen" />
+		<link rel="stylesheet" href="scripts/fancybox/jquery.fancybox.css" media="screen" />
+		<link rel="stylesheet" href="scripts/bootstrap/css/bootstrap.css" media="screen" />
+		<script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
+		<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+		<script type="text/javascript" src="scripts/swipe.js"></script>
+		<script type="text/javascript" src="scripts/jquery.pin.js"></script>
+		<script type="text/javascript" src="scripts/fancybox/jquery.fancybox.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap/js/bootstrap.min"></script>
+		<script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.5.2.min.js"></script>
+		
+		
+		<script type="text/javascript">
+		$(document).ready(function(){
+					
+			//.parallax(xPosition, speedFactor, outerHeight) options:
+			//xPosition - Horizontal position of the element
+			//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+			//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+			
+			$('.band').parallax("0px", 0, 0.1, "up");
+			
+			$('.bird').parallax("0px", 38, 0.4, "up");
+			
+			
+			$('.bubble2').parallax("0px", -20, 0.1, "up");
+			$('.bubble3').parallax("0px", -20, 0.5, "up");
+			$('.bubble4').parallax("0px", -20, 0.3, "up");
+						
+			$('.bottle').parallax("0px", 0, 0.4, "up");
+			$('.zig1').parallax("-50px", -200, 0.1, "up");
+			$('.zig2').parallax("-220px", -200, 0.1, "up");
+			
+			$('.legendarygivebackbg').parallax("50%", -100, 0.3, "up");
+					
+			
+			
+					
+		})
+		</script>
+	</head>
+
+	<body>
+		<div class="content" id="header">
+			<div class="holder">
+			<table>
+				<tr>
+					<td style="width:178px"><a href="">Enter Sweepstakes</a></td>
+					<td style="width:141px"><a href="#avettbros">Avett Brothers</a></td>
+					<td style="width:76px"><a href="#charities">Pledge</a></td>
+					<td class="logo"></td>
+					<td style="width:305px"><a href="#merch" style="margin-left: 147px;">Cheerwine Merch</a></td>
+					<td><a href="">Redeem Your Ticket</a></td>
+				</tr>
+			</table>
+			</div>
+		</div>
+		<div class="sodaflow">
+			<div class="holder">
+				<input type="button" id="flowfrombottle" value="flowfrombottle" style="display:none"/>
+				<div id="container"></div>
+				<div id="container2"></div>	
+				<div id="container3"></div>					
+			</div>
+			<div class="content" id="avonstage">
+				<div class="holder">
+					<div class="stage"></div>
+					<div class="lg2"></div>
+					<div class="band"></div>
+					<div class="black"></div>
+					<p>
+						Cheerwine and Avett Brothers are reaming up again for the Legendary Giveback ll, a
+						concert for the greatest and most generous fans in the world. Just like last year,
+						you can expect a Legendary night for fans to benefit several local charities.
+						<br /><br />
+						Once again, we'll be offering Livestream Access for everyone who can't attend.
+					</p>
+					<p style="margin:600px 0px 0px 326px; color:#666666">Scroll to begin your Legendary Journey</p>
+					<div class="button"></div>
+				</div>
+			</div>
+			<div class="content" id="charities">
+				<div class="holder">
+					<div class="leftcloud"></div>
+					<div class="rightcloud"></div>
+					<div class="giveback"></div>
+					<p>The Legendary Giveback is about more than just legendary music. 
+					It's about giving back to the community. This year, Cheerwine and the Avett Brothers have 
+					decided on three organizations to benefit from the Legendary Giveback.</p>
+					<div class="bird"></div>
+					<a class="pick fancybox" rel="group" id="pledge" href="#pledgeform"></a>
+					
+					<div id="pledgeform" style="padding: 10px 20px; display: none;">
+						<h1 style="margin-top: 5px; font-family: neuemed; font-size: 32px; text-align: center;" id="logo">Pledge</h1>
+						<form accept-charset="UTF-8" action="/home/pledge" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="?"><input name="authenticity_token" type="hidden" value="MwGzcynw1nCKwh4b1Kh4o+yVzC/iB45D1l27J3iIctI="></div>
+							<table id="pledgeformtable">
+								<tbody><tr>
+									<td style="width:100px">Name</td>
+									<td><input id="pledgename" name="pledgename" type="text"></td>
+								</tr>
+								<tr>
+									<td>E-Mail</td>
+									<td><input id="pledgeemail" name="pledgeemail" type="text"></td>
+								</tr>
+								<tr>
+									<td>Hours Pledged</td>
+									<td><input id="hourspledged" name="hourspledged" type="text"></td>
+								</tr>
+								<tr>
+									<td>Charity to Pledge to</td>
+									<td><input id="charitytopledge" name="charitytopledge" type="text"></td>
+								</tr>
+							</tbody></table>
+							<input class="btn btn-info" name="commit" style="margin: 10px 0px 0px 120px;" type="submit" value="Submit">
+						</form>	
+					</div>
+	
+					<div id='slider' class='swipe'>
+						<div class='swipe-wrap'>
+							<div class="swipediv" id="swipe_div_1">
+								<div class="ophomefront"></div>
+								<p class="homefront">Operation Homefront gives back by providing the families or our military service 
+								members and wounded veterans emergency assistance in times of need.</p>
+							</div>
+							<div class="swipediv" id="swipe_div_2">
+								<div class="bbbsisters"></div>
+								<p class="bbbsisterstext">Big Brothers Big Sisters has been giving back for over a century by providing underprivileged
+								children with mentoring opportunities that change their lives forever.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div id="slidebuttons">
+						<ul id="swipe_nav" class="nav">
+							<li id="swipe_nav_1" class="active"></li>
+							<li id="swipe_nav_2" class=""></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="content" id="goldenticket">
+				<div class="holder">
+					<div class="bubbles bubble2"></div>
+					<div class="bubbles bubble3"></div>
+					<div class="bubbles bubble4"></div>
+					<div class="oval"></div>
+					<a class="pick fancybox" id="twitter" href="#redeemform"></a>
+					
+					<div id="redeemform" style="padding: 10px 20px; display: none;">
+						<h1 style="margin-top: 5px; font-family: neuemed; font-size: 32px; text-align: center;" id="logo">Redeem</h1>
+						<form accept-charset="UTF-8" action="/home/redeem" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="?"><input name="authenticity_token" type="hidden" value="MwGzcynw1nCKwh4b1Kh4o+yVzC/iB45D1l27J3iIctI="></div>
+							<table id="formtable">
+								<tbody><tr>
+									<td style="width:100px">Name</td>
+									<td><input id="redeemname" name="redeemname" type="text"></td>
+								</tr>
+								<tr>
+									<td>E-Mail</td>
+									<td><input id="redeememail" name="redeememail" type="text"></td>
+								</tr>
+								<tr>
+									<td>City</td>
+									<td><input id="city" name="city" type="text"></td>
+								</tr>
+								<tr>
+									<td>State</td>
+									<td><input id="state" name="state" type="text"></td>
+								</tr>
+								<tr>
+									<td>Code</td>
+									<td><input id="code" name="code" type="text"></td>
+								</tr>
+							</tbody></table>
+							<input class="btn btn-info" name="commit" style="margin: 10px 0px 0px 120px;" type="submit" value="Submit">
+						</form>	
+					</div>
+				</div>
+			</div>
+			<div class="content" id="cwsection">
+				<div class="zig1"></div>
+				<div class="zig2"></div>
+				<div class="holder">
+					<div class="topcord"></div>
+					<div class="cheerwineheader"></div>
+					<p>Scott and Seth Avett hail from the heart of Cheerwine Country, growing up in Concord, North
+					Carolina. The Avett boys have a style that's all their own -a combination that's been described
+					as a flok, country, bluegrass, rock and pop with a jab of punk-style dynamics here and there.</p>
+					<div class="bottle"></div>
+					<div class="botcord"></div>
+					<div class="pick" id="visit" onclick="javascript:location.href='#'"></div>
+				</div>
+			</div>
+			<div class="content" id="avettbros">
+				<div class="avettbrossbg"></div>
+				<div class="abrightzig"></div>
+				<div class="holder">
+					<div class="abband"></div>
+					<p>Scott and Seth Avett hail from the heart of Cheerwine Country, growing up in Concord, North
+					Carolina. The Avett boys have a style that's all their own -a combination that's been described
+					as a flok, country, bluegrass, rock and pop with a jab of punk-style dynamics here and there.<br /><br />
+					The Avetts are backed by Bob Crawford on stand-up bass, Joe Kwon on cello and Jacob Edwards on drums.<br /><br />
+					Together, Cheerwine and the Avett Brothers make the perfect way to do some good.</p>
+					<div class="abrightredzig"></div>
+					<div class="ableftredzig"></div>
+					<div class="abredtexture"></div>
+					<div class="avettbrostitle"></div>
+					<a class="pick fancybox" id="play" href="#videoplayer"></a>
+					<div id="videoplayer" style="padding: 10px 20px; display: none;">
+						<iframe src="http://player.vimeo.com/video/VIDEO_ID" width="WIDTH" height="HEIGHT" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					</div>
+				</div>
+			</div>
+			<div class="content" id="merch">
+				<div class="legendarygivebackbg"></div>
+				<div class="holder">
+					<div class="mechtshirt"></div>
+					<div class="lggivebacktitle"></div>
+					<p>Get the gear that shows you care. Don't miss out on your chance to own a piece of the Legendary Giveback II.</p>
+					<div class="pick" id="shop" onclick="javascript:location.href='#'"></div>
+				</div>
+			</div>
+			<div class="content" id="footer">
+				<div class="holder">
+					<div style="margin-left:65px">
+						<canvas id="c" width="261" height="550" style="position:absolute; z-index:22"></canvas>
+						<img src="http://69.46.20.44/images/CheerwineGlass_empty.png" style="position:absolute; z-index:21"/>
+					</div>
+					<div class="twelvepack"></div>
+					<div class="twoliter"></div>
+					<p class="title">Like us on facebook to enter Sweepstakes<p>
+					<p>Enter the code found on specially marked 12 packs, 2 liter bottles and 20 oz. bottles for your chance to win tickets to 
+					the Legendary Giveback II.</p>
+					<div class="pick" id="likeenter" onclick="javascript:location.href='#'"></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		
+		
+		var checked = 0;
+				
+		$(document).ready(function() {
+    	
+			$(".fancybox").fancybox();
+		
+			$(document).scroll(function() {
+				if (checked == 0) {
+					var top = $(document).scrollTop();
+
+					if (top > 2000) {
+						FillGlass();
+						checked = 1;
+					}
+				}
+			});
+		
+		
+		
+		function FillGlass()
+		{
+			var img = new Image,
+			ctx = document.getElementById('c').getContext('2d');
+
+			img.src = "http://69.46.20.44/images/CheerwineGlass_full.png";
+			img.addEventListener('load', function () {
+
+				var interval = setInterval(function() {
+					var x = 0, y = 0, z = 0;
+
+					return function () {
+						ctx.fillRect(0,z,261,550);
+						ctx.globalCompositeOperation = 'source-out';
+						ctx.drawImage(img, x, y);
+
+						z -= 1;
+						if (z > ctx.canvas.height) {
+						  z = 0;
+						}
+					};
+					}(), 500/40);
+				}, false);
+		}
+		//-------
+		//-IDLE--
+		//-------
+		
+		setTimeout(function(){sodaidle();},4800);
+		function sodaidle(){
+			var stage = new Kinetic.Stage({
+				container: 'container',
+				width: 37,
+				height: 3838
+			});
+			var layer = new Kinetic.Layer();
+			var animations = {
+				idle: [{
+				x: 0,
+				y: 0,
+				width: 36,
+				height: 3838
+				}, {
+				x: 37,
+				y: 0,
+				width: 37,
+				height: 3838
+				}, {
+				x: 74,
+				y: 0,
+				width: 37,
+				height: 3838
+				}, {
+				x: 111,
+				y: 0,
+				width: 37,
+				height: 3838
+				}],
+			};
+
+			var imageObj = new Image();
+			imageObj.onload = function() {
+			var blob = new Kinetic.Sprite({
+				x: 1,
+				y: 1,
+				image: imageObj,
+				animation: 'idle',
+				animations: animations,
+				frameRate: 7,
+				index: 0
+			});
+
+			// add the shape to the layer
+			layer.add(blob);
+
+			// add the layer to the stage
+			stage.add(layer);
+
+			// start sprite animation
+			blob.start();
+			
+			};
+			
+			imageObj.src = 'http://69.46.20.44/images/sodaflow-sprite-long.png';
+		}
+			//----------
+			//-SODAFLOW-
+			//----------
+		  
+			function dropSoda(){
+				var stagetwo = new Kinetic.Stage({
+					container: 'container2',
+					width: 484,
+					height: 603
+				});
+				var layertwo = new Kinetic.Layer();
+			  
+				var animationstwo = {
+				idle: [{
+					x: 0,
+					y: 0,
+					width: 482,
+					height: 603
+				}, {
+					x: 492,
+					y: 0,
+					width: 478,
+					height: 603
+				}, {
+					x: 974,
+					y: 0,
+					width: 484,
+					height: 603
+				}, {
+					x: 1463,
+					y: 0,
+					width: 477,
+					height: 603
+				}],
+
+				flowfrombottle: [
+					{x: 0, y: 0, width: 482, height: 5}, {x: 492, y: 0, width: 478, height: 10}, {x: 974, y: 0, width: 484, height: 15}, 
+					{x: 1463, y: 0, width: 477, height: 20}, {x: 0, y: 0, width: 482, height: 30}, {x: 492, y: 0, width: 478, height: 60},
+					{x: 974, y: 0, width: 484, height: 90}, {x: 1463, y: 0, width: 477, height: 120},{x: 0, y: 0, width: 482, height: 150},
+					{x: 492, y: 0, width: 478, height: 180}, {x: 974,y: 0, width: 484, height: 210}, {x: 1463,y: 0, width: 477, height: 240},
+					{x: 0, y: 0, width: 482, height: 270}, {x: 492, y: 0, width: 478, height: 300}, {x: 974, y: 0, width: 484, height: 330}, 
+					{x: 1463, y: 0, width: 477, height: 360}, {x: 0, y: 0, width: 482, height: 390}, {x: 492, y: 0, width: 478, height: 420}, 
+					{x: 974, y: 0, width: 484, height: 450}, {x: 1463, y: 0, width: 477, height: 480},{x: 0, y: 0, width: 482, height: 510}, 
+					{x: 492, y: 0, width: 478, height: 540}, {x: 974, y: 0, width: 484, height: 570}, {x: 1463, y: 0, width: 477, height: 600}],
+				};
+				
+
+				var imageObjtwo = new Image();
+				imageObjtwo.onload = function() {
+				var blobtwo = new Kinetic.Sprite({
+					x: 1,
+					y: 1,
+					image: imageObjtwo,
+					animation: 'idle',
+					animations: animationstwo,
+					frameRate: 10,
+					index: 0
+				});
+				
+				// add the shape to the layer
+				layertwo.add(blobtwo);
+				
+				// add the layer to the stage
+				stagetwo.add(layertwo);
+
+				// start sprite animation
+				blobtwo.start();
+				
+				// resume transition
+				document.getElementById('flowfrombottle').addEventListener('click', function() {
+				blobtwo.setAnimation('flowfrombottle');
+
+				blobtwo.afterFrame(23, function() {
+					blobtwo.setAnimation('idle');
+				});
+				}, false);
+				
+				$(document).ready(function() {
+					blobtwo.setAnimation('flowfrombottle');
+					blobtwo.afterFrame(23, function() {
+					blobtwo.setAnimation('idle');
+					});
+				});
+			};
+			imageObjtwo.src = 'http://69.46.20.44/images/bendsodaflow.png';
+			}
+		  
+		//----------
+		//-RISEHAND-
+		//----------
+		  
+		var stagethree = new Kinetic.Stage({
+			container: 'container3',
+			width: 684,
+			height: 849
+		});
+		var layerthree = new Kinetic.Layer();
+
+		var imageObjthree = new Image();
+		imageObjthree.onload = function() {
+		var bottlewithhand = new Kinetic.Image({
+			x: 150,
+			y: 250,
+			image: imageObjthree,
+			width: 384,
+			height: 449,
+			offset: [50, 50]
+		});
+
+		// add the shape to the layer
+		layerthree.add(bottlewithhand);
+
+		// add the layer to the stage
+		stagethree.add(layerthree);
+			
+		//animation
+		var angularSpeed = Math.PI / -6;
+		var animthree = new Kinetic.Animation(function(frame) {
+			var angleDiff = frame.timeDiff * angularSpeed / 1000;
+			var time = frame.time;
+			var newY = -100 * time / 1000;
+
+			bottlewithhand.setY(newY + 200);
+
+			if(bottlewithhand.attrs.y < 130)
+			{
+				bottlewithhand.rotate(angleDiff);
+				if(bottlewithhand.attrs.rotation < -0.4)
+				{
+					animthree.stop();
+					dropSoda();
+				}
+			}
+		}, layerthree);
+
+		animthree.start();
+		};
+		imageObjthree.src = 'http://69.46.20.44/images/handwithbottle.png';
+		  
+		});
+		
+		
+		
+		</script>
+		<script type="text/javascript">
+		
+			
+		var swipe = document.getElementById('slider'),
+		swipe_nav = document.getElementById('swipe_nav'),
+		swipe_title = document.getElementById('swipe_title');
+
+		window.mySwipe = new Swipe(swipe, {
+			speed: 500,
+			auto: 3000,
+			continuous: true,
+			disableScroll: false,
+			callback: function(ind, elem) {
+				for (var i = 0; i < swipe_nav.children.length; i++) {
+					if (swipe_nav.children[i].className == "active") {
+					  swipe_nav.children[i].className = "";
+					}        
+				}
+				
+				if (ind == 0) {
+				document.getElementById('swipe_nav_'+ (ind+1)).className = "active";
+				}
+				if (ind == 1) {
+				document.getElementById('swipe_nav_'+ (ind+1)).className = "active";
+				}
+				if (ind == 2) {
+				document.getElementById('swipe_nav_'+ (1)).className = "active";
+				}
+				if (ind == 3) {
+				document.getElementById('swipe_nav_'+ (2)).className = "active";
+				}
+			}
+		});
+		
+		swipe.onclick = function() {
+			mySwipe.next();
+		}
+		
+		for (var x = 0; x < swipe_nav.children.length; x++) {
+			addSwipeClick(x);		     
+		}
+		
+		function addSwipeClick(x) {
+			swipe_nav.children[x].onclick = function() {
+				mySwipe.slide(x, 500);
+			}
+		}
+		
+		$("#header").pin({containerSelector: "body", minWidth: 1140});
+		
+		
+		
+		</script>
+	</body>
+</html>
