@@ -436,11 +436,11 @@ width: 377px;
 
 .abband
 {
-	width: 680px;
+	width: 752px;
 	height: 318px;
 	background-image: url("abband.png");
 	background-repeat: no-repeat;
-	margin-left: 445px;
+	margin-left: 395px;
 	position: absolute;
 	z-index: 10;
 	margin-top: 363px;
@@ -453,10 +453,10 @@ width: 377px;
 	height: 680px;
 	background-image: url("abrightzig.png");
 	background-repeat: no-repeat;
-	background-position: -110px -11px;
+	background-position: -81px -11px;
 	position: absolute;
 	z-index: 7;
-	margin-left: 78%;
+	margin-left: 76%;
 }
 
 .abshadow
