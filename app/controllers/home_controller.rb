@@ -11,6 +11,8 @@ class HomeController < ApplicationController
     @hourspledged = params[:hourspledged]
     @charitytopledge = params[:charitytopledge]
         
+    UserMailer.pledge_mail(@name, @email, @hourspledged, @charitytopledge).deliver
+
     Pledge.create name: @name, email: @email, hourspledge: @hourspledged, charitytopledge: @charitytopledge
         
     redirect_to :action => "index"
@@ -23,6 +25,8 @@ class HomeController < ApplicationController
     @city = params[:city]
     @state = params[:state]
     @code = params[:code]  
+
+    UserMailer.redeem_mail(@name, @email, @city, @state, @code).deliver
 
     Redeem.create name: @name, email: @email, city: @city, state: @state, code: @code
         
