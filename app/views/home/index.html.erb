@@ -1,28 +1,17 @@
 <html>
 	<head>
 		<title>Cheerwine</title>
-		<link rel="stylesheet" href="style/style.css?version=2" media="screen" />
-		<link rel="stylesheet" href="scripts/fancybox/jquery.fancybox.css" media="screen" />
-		<link rel="stylesheet" href="scripts/bootstrap/css/bootstrap.css" media="screen" />
-		<script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
-		<script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
-		<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
-		<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
-		<script type="text/javascript" src="scripts/swipe.js"></script>
-		<script type="text/javascript" src="scripts/jquery.pin.js"></script>
-		<script type="text/javascript" src="scripts/fancybox/jquery.fancybox.js"></script>
-		<script type="text/javascript" src="scripts/bootstrap/js/bootstrap.min"></script>
-		<script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.5.2.min.js"></script>
 		
 		
+		<% if @users_browser != "iphone" %>
 		<script type="text/javascript">
 		$(document).ready(function(){
-					
+			
 			//.parallax(xPosition, speedFactor, outerHeight) options:
 			//xPosition - Horizontal position of the element
 			//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
 			//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-			
+		
 			$('.band').parallax("0px", 0, 0.1, "up");
 			
 			$('.bird').parallax("0px", 38, 0.4, "up");
@@ -37,12 +26,12 @@
 			$('.zig2').parallax("-220px", -200, 0.1, "up");
 			
 			$('.legendarygivebackbg').parallax("50%", -100, 0.3, "up");
-					
-			$('.abband').parallax(0, 0, 0.05, "left");
 			
-					
+			$('.abband').parallax(0, 0, 0.05, "left");
+				
 		})
 		</script>
+		<% end %>
 	</head>
 
 	<body>
@@ -50,12 +39,13 @@
 			<div class="holder">
 			<table>
 				<tr>
-					<td style="width:178px"><a href="">Enter Sweepstakes</a></td>
-					<td style="width:141px"><a href="#avettbros">Avett Brothers</a></td>
-					<td style="width:76px"><a href="#charities">Pledge</a></td>
+
+					<td style="width:88px"><a onclick="GotoPledge()">Pledge</a></td>
+					<td style="width:133px"><a onclick="GotoGoldenticket()">Redeem Ticket</a></td>
+					<td style="width:171px"><a onclick="GotoAvettbros()">The Avett Brothers</a></td>
 					<td class="logo"></td>
-					<td style="width:305px"><a href="#merch" style="margin-left: 147px;">Cheerwine Merch</a></td>
-					<td><a href="">Redeem Your Ticket</a></td>
+					<td style="width:293px"><a onclick="GotoMerch()" style="margin-left: 147px;">Merchandise</a></td>
+					<td><a onclick="GotoFooter()">Enter Sweepstakes</a></td>
 				</tr>
 			</table>
 			</div>
@@ -65,7 +55,9 @@
 				<input type="button" id="flowfrombottle" value="flowfrombottle" style="display:none"/>
 				<div id="container"></div>
 				<div id="container2"></div>	
-				<div id="container3"></div>					
+				<div id="container3"></div>	
+				<div id="rotatedhandwithbottle"></div>		
+				<div id="cap"></div>					
 			</div>
 			<div class="content" id="avonstage">
 				<div class="holder">
@@ -74,11 +66,12 @@
 					<div class="band"></div>
 					<div class="black"></div>
 					<p>
-						Cheerwine and Avett Brothers are reaming up again for the Legendary Giveback ll, a
-						concert for the greatest and most generous fans in the world. Just like last year,
+						Cheerwine and the Avett Brothers are teaming up again for the Legendary Giveback II, 
+						a concert for the greatest and most generous fans in the world. Just like last year,
 						you can expect a Legendary night for fans to benefit several local charities.
 						<br /><br />
-						Once again, we'll be offering Livestream Access for everyone who can't attend.
+						If you can’t make it to the concert, we’ll be offering Livestream Access to fans who
+						pledge their time and give back in their communities. 
 					</p>
 					<p style="margin:600px 0px 0px 326px; color:#666666">Scroll to begin your Legendary Journey</p>
 					<div class="button"></div>
@@ -86,12 +79,9 @@
 			</div>
 			<div class="content" id="charities">
 				<div class="holder">
-					<div class="leftcloud"></div>
-					<div class="rightcloud"></div>
 					<div class="giveback"></div>
-					<p>The Legendary Giveback is about more than just legendary music. 
-					It's about giving back to the community. This year, Cheerwine and the Avett Brothers have 
-					decided on three organizations to benefit from the Legendary Giveback.</p>
+					<p>The Legendary Giveback is about more than just legendary music. It's about giving back to the community.  
+					This year, Cheerwine and the Avett Brothers have decided on three organizations to benefit from the Legendary Giveback.</p>
 					<div class="bird"></div>
 					<a class="pick fancybox" rel="group" id="pledge" href="#pledgeform"></a>
 					
@@ -132,6 +122,11 @@
 								<p class="bbbsisterstext">Big Brothers Big Sisters has been giving back for over a century by providing underprivileged
 								children with mentoring opportunities that change their lives forever.</p>
 							</div>
+							<div class="swipediv" id="swipe_div_3">
+								<p class="bbbsisterstext" style="margin-top:450px">
+								The third will be a local Carolina charity that our fans can help pick. Follow us on 
+								facebook to help us decide.</p>
+							</div>
 						</div>
 					</div>
 					
@@ -139,6 +134,7 @@
 						<ul id="swipe_nav" class="nav">
 							<li id="swipe_nav_1" class="active"></li>
 							<li id="swipe_nav_2" class=""></li>
+							<li id="swipe_nav_3" class=""></li>
 						</ul>
 					</div>
 				</div>
@@ -187,9 +183,11 @@
 				<div class="holder">
 					<div class="topcord"></div>
 					<div class="cheerwineheader"></div>
-					<p>Scott and Seth Avett hail from the heart of Cheerwine Country, growing up in Concord, North
-					Carolina. The Avett boys have a style that's all their own -a combination that's been described
-					as a flok, country, bluegrass, rock and pop with a jab of punk-style dynamics here and there.</p>
+					<p>The Legend of the South has been bringing a smile to people’s lips since 1917. 
+					Created in Salisbury, North Carolina, Cheerwine is the oldest family-owned soda 
+					company in the country, and we’ve been giving back in the Carolinas for as long as 
+					we can remember. So reward yourself for giving back with a glass of this tall, bubbly 
+					drink of good cheer.</p>
 					<div class="bottle"></div>
 					<div class="botcord"></div>
 					<div class="pick" id="visit" onclick="javascript:location.href='#'"></div>
@@ -200,18 +198,23 @@
 				<div class="abrightzig"></div>
 				<div class="holder">
 					<div class="abband"></div>
-					<p>Scott and Seth Avett hail from the heart of Cheerwine Country, growing up in Concord, North
-					Carolina. The Avett boys have a style that's all their own -a combination that's been described
-					as a flok, country, bluegrass, rock and pop with a jab of punk-style dynamics here and there.<br /><br />
-					The Avetts are backed by Bob Crawford on stand-up bass, Joe Kwon on cello and Jacob Edwards on drums.<br /><br />
-					Together, Cheerwine and the Avett Brothers make the perfect way to do some good.</p>
+					<p>Like Cheerwine, The Avett Brothers are Legends in the South, so it’s little wonder 
+					that they want to help give back to the community that has given them so much.
+					Scott and Seth Avett hail from the heart of Cheerwine Country, growing up in 
+					Concord, North Carolina. The Avett boys unique style combines folk, country, 
+					bluegrass, rock and pop with a jab of punk-style dynamics here and there.<br /><br />
+					The Avett’s are backed by Bob Crawford on stand-up bass, Joe Kwon on cello and 
+					Jacob Edwards on drums.</p>
+					<a href="https://twitter.com/theavettbros" class="socialmedia"><img src="<%= asset_path('twitter.png') %>"/></a>
+					<a href="https://www.facebook.com/theavettbrothers?fref=ts" class="socialmedia" id="facebook"><img src="<%= asset_path('facebook.png') %>"/></a>
+					<a href="http://www.youtube.com/user/theavettbrothers" class="socialmedia" id="youtube"><img src="<%= asset_path('youtube.png') %>"/></a>
 					<div class="abrightredzig"></div>
 					<div class="ableftredzig"></div>
 					<div class="abredtexture"></div>
 					<div class="avettbrostitle"></div>
 					<a class="pick fancybox" id="play" href="#videoplayer"></a>
 					<div id="videoplayer" style="padding: 10px 20px; display: none;">
-						<iframe src="http://player.vimeo.com/video/VIDEO_ID" width="WIDTH" height="HEIGHT" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+						<iframe src="http://player.vimeo.com/video/68333009" width="680" height="340" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 					</div>
 				</div>
 			</div>
@@ -220,7 +223,9 @@
 				<div class="holder">
 					<div class="mechtshirt"></div>
 					<div class="lggivebacktitle"></div>
-					<p>Get the gear that shows you care. Don't miss out on your chance to own a piece of the Legendary Giveback II.</p>
+					<p>Get the gear that shows you care. Don’t miss out on the chance to own a piece of the 
+					Legendary Giveback II. We’ve got hoodies, T-Shirts and hats that you can rock, as 
+					well as posters and other cool stuff that also make great gifts.</p>
 					<div class="pick" id="shop" onclick="javascript:location.href='#'"></div>
 				</div>
 			</div>
@@ -232,9 +237,10 @@
 					</div>
 					<div class="twelvepack"></div>
 					<div class="twoliter"></div>
-					<p class="title">Like us on facebook to enter Sweepstakes<p>
-					<p>Enter the code found on specially marked 12 packs, 2 liter bottles and 20 oz. bottles for your chance to win tickets to 
-					the Legendary Giveback II.</p>
+					<p class="title">Like us on Facebook for your chance to win! <p>
+					<p>Get codes from specially marked 12 packs, 2-liter bottles and 20 oz. bottles, then 
+					play Spin to Win on our Facebook page (Facebook.com/Cheerwine) for a chance to 
+					win VIP tickets to the Legendary Giveback II or thousands of other great prizes.</p>
 					<div class="pick" id="likeenter" onclick="javascript:location.href='#'"></div>
 				</div>
 			</div>
@@ -245,7 +251,8 @@
 		var checked = 0;
 				
 		$(document).ready(function() {
-    	
+    	 		  		
+
 			$(".fancybox").fancybox();
 		
 			$(document).scroll(function() {
@@ -258,9 +265,64 @@
 					}
 				}
 			});
+			
+			RiseHand();
+			
+		});
 		
+		//----------
+		//-SHOTCAP--
+		//----------
+		function ShotTheCap(){
+			var stagefour = new Kinetic.Stage({
+				container: 'cap',
+				width: 800,
+				height: 800
+			});
+			var layerfour = new Kinetic.Layer();
+
+			var imageObjfour = new Image();
+			imageObjfour.onload = function() {
+			var cap = new Kinetic.Image({
+				x: 800,
+				y: 65,
+				image: imageObjfour,
+				width: 59,
+				height: 65,
+				offset: [50, 50]
+			});
+
+			// add the shape to the layer
+			layerfour.add(cap);
+
+			// add the layer to the stage
+			stagefour.add(layerfour);
+				
+			//animation
+			var angularSpeed = Math.PI / -6;
+			var animfour = new Kinetic.Animation(function(frame) {
+				var angleDiff = frame.timeDiff * angularSpeed / 1000;
+							
+				var time = frame.time;
+				var newX = -100 * time / 200;
+				var newY = 20 * time / 200;
+				cap.setX(newX + 600);
+				cap.setY(newY+ 50);
+				cap.rotate(angleDiff);
+				if(cap.attrs.x < -60)
+				{
+					animfour.stop();
+				}
+			}, layerfour);
+
+			animfour.start();
+			};
+			imageObjfour.src = 'http://69.46.20.44/images/cap.png';
+		}  
 		
-		
+		//----------
+		//-FillGlass-
+		//----------
 		function FillGlass()
 		{
 			var img = new Image,
@@ -288,9 +350,7 @@
 		//-------
 		//-IDLE--
 		//-------
-		
-		setTimeout(function(){sodaidle();},4800);
-		function sodaidle(){
+		function SodaIdle(){
 			var stage = new Kinetic.Stage({
 				container: 'container',
 				width: 37,
@@ -346,153 +406,163 @@
 			
 			imageObj.src = 'http://69.46.20.44/images/sodaflow-sprite-long.png';
 		}
-			//----------
-			//-SODAFLOW-
-			//----------
+		
+		//----------
+		//-SODAFLOW-
+		//----------
+	  
+		function DropSoda(){
+			var stagetwo = new Kinetic.Stage({
+				container: 'container2',
+				width: 484,
+				height: 603
+			});
+			var layertwo = new Kinetic.Layer();
 		  
-			function dropSoda(){
-				var stagetwo = new Kinetic.Stage({
-					container: 'container2',
-					width: 484,
-					height: 603
-				});
-				var layertwo = new Kinetic.Layer();
-			  
-				var animationstwo = {
-				idle: [{
-					x: 0,
-					y: 0,
-					width: 482,
-					height: 603
-				}, {
-					x: 492,
-					y: 0,
-					width: 478,
-					height: 603
-				}, {
-					x: 974,
-					y: 0,
-					width: 484,
-					height: 603
-				}, {
-					x: 1463,
-					y: 0,
-					width: 477,
-					height: 603
-				}],
+			var animationstwo = {
+			idle: [{
+				x: 0,
+				y: 0,
+				width: 482,
+				height: 603
+			}, {
+				x: 492,
+				y: 0,
+				width: 478,
+				height: 603
+			}, {
+				x: 974,
+				y: 0,
+				width: 484,
+				height: 603
+			}, {
+				x: 1463,
+				y: 0,
+				width: 477,
+				height: 603
+			}],
 
-				flowfrombottle: [
-					{x: 0, y: 0, width: 482, height: 5}, {x: 492, y: 0, width: 478, height: 10}, {x: 974, y: 0, width: 484, height: 15}, 
-					{x: 1463, y: 0, width: 477, height: 20}, {x: 0, y: 0, width: 482, height: 30}, {x: 492, y: 0, width: 478, height: 60},
-					{x: 974, y: 0, width: 484, height: 90}, {x: 1463, y: 0, width: 477, height: 120},{x: 0, y: 0, width: 482, height: 150},
-					{x: 492, y: 0, width: 478, height: 180}, {x: 974,y: 0, width: 484, height: 210}, {x: 1463,y: 0, width: 477, height: 240},
-					{x: 0, y: 0, width: 482, height: 270}, {x: 492, y: 0, width: 478, height: 300}, {x: 974, y: 0, width: 484, height: 330}, 
-					{x: 1463, y: 0, width: 477, height: 360}, {x: 0, y: 0, width: 482, height: 390}, {x: 492, y: 0, width: 478, height: 420}, 
-					{x: 974, y: 0, width: 484, height: 450}, {x: 1463, y: 0, width: 477, height: 480},{x: 0, y: 0, width: 482, height: 510}, 
-					{x: 492, y: 0, width: 478, height: 540}, {x: 974, y: 0, width: 484, height: 570}, {x: 1463, y: 0, width: 477, height: 600}],
-				};
-				
+			flowfrombottle: [
+				{x: 0, y: 0, width: 482, height: 5}, {x: 492, y: 0, width: 478, height: 10}, {x: 974, y: 0, width: 484, height: 15}, 
+				{x: 1463, y: 0, width: 477, height: 20}, {x: 0, y: 0, width: 482, height: 30}, {x: 492, y: 0, width: 478, height: 60},
+				{x: 974, y: 0, width: 484, height: 90}, {x: 1463, y: 0, width: 477, height: 120},{x: 0, y: 0, width: 482, height: 150},
+				{x: 492, y: 0, width: 478, height: 180}, {x: 974,y: 0, width: 484, height: 210}, {x: 1463,y: 0, width: 477, height: 240},
+				{x: 0, y: 0, width: 482, height: 270}, {x: 492, y: 0, width: 478, height: 300}, {x: 974, y: 0, width: 484, height: 330}, 
+				{x: 1463, y: 0, width: 477, height: 360}, {x: 0, y: 0, width: 482, height: 390}, {x: 492, y: 0, width: 478, height: 420}, 
+				{x: 974, y: 0, width: 484, height: 450}, {x: 1463, y: 0, width: 477, height: 480},{x: 0, y: 0, width: 482, height: 510}, 
+				{x: 492, y: 0, width: 478, height: 540}, {x: 974, y: 0, width: 484, height: 570}, {x: 1463, y: 0, width: 477, height: 600}],
+			};
+			
 
-				var imageObjtwo = new Image();
-				imageObjtwo.onload = function() {
-				var blobtwo = new Kinetic.Sprite({
-					x: 1,
-					y: 1,
-					image: imageObjtwo,
-					animation: 'idle',
-					animations: animationstwo,
-					frameRate: 10,
-					index: 0
-				});
-				
-				// add the shape to the layer
-				layertwo.add(blobtwo);
-				
-				// add the layer to the stage
-				stagetwo.add(layertwo);
+			var imageObjtwo = new Image();
+			imageObjtwo.onload = function() {
+			var blobtwo = new Kinetic.Sprite({
+				x: 1,
+				y: 1,
+				image: imageObjtwo,
+				animation: 'idle',
+				animations: animationstwo,
+				frameRate: 10,
+				index: 0
+			});
+			
+			// add the shape to the layer
+			layertwo.add(blobtwo);
+			
+			// add the layer to the stage
+			stagetwo.add(layertwo);
 
-				// start sprite animation
-				blobtwo.start();
-				
-				// resume transition
-				document.getElementById('flowfrombottle').addEventListener('click', function() {
-				blobtwo.setAnimation('flowfrombottle');
+			// start sprite animation
+			blobtwo.start();
+			
+			// resume transition
+			document.getElementById('flowfrombottle').addEventListener('click', function() {
+			blobtwo.setAnimation('flowfrombottle');
 
-				blobtwo.afterFrame(23, function() {
-					blobtwo.setAnimation('idle');
-				});
-				}, false);
-				
+			blobtwo.afterFrame(23, function() {
+				blobtwo.setAnimation('idle');
+							
+			});
+			}, false);
+			
 				$(document).ready(function() {
 					blobtwo.setAnimation('flowfrombottle');
 					blobtwo.afterFrame(23, function() {
 					blobtwo.setAnimation('idle');
+					
+					setTimeout(function(){SodaIdle();},100);
 					});
 				});
 			};
 			imageObjtwo.src = 'http://69.46.20.44/images/bendsodaflow.png';
-			}
+		}
 		  
 		//----------
 		//-RISEHAND-
 		//----------
 		  
-		var stagethree = new Kinetic.Stage({
-			container: 'container3',
-			width: 684,
-			height: 849
-		});
-		var layerthree = new Kinetic.Layer();
+		function RiseHand(){
+		
+			var stagethree = new Kinetic.Stage({
+				container: 'container3',
+				width: 684,
+				height: 849
+			});
+			var layerthree = new Kinetic.Layer();
 
-		var imageObjthree = new Image();
-		imageObjthree.onload = function() {
-		var bottlewithhand = new Kinetic.Image({
-			x: 150,
-			y: 250,
-			image: imageObjthree,
-			width: 384,
-			height: 449,
-			offset: [50, 50]
-		});
+			var imageObjthree = new Image();
+			imageObjthree.onload = function() {
+			var bottlewithhand = new Kinetic.Image({
+				x: 145,
+				y: 250,
+				image: imageObjthree,
+				width: 415,
+				height: 523,
+				offset: [50, 50]
+			});
 
-		// add the shape to the layer
-		layerthree.add(bottlewithhand);
+			// add the shape to the layer
+			layerthree.add(bottlewithhand);
 
-		// add the layer to the stage
-		stagethree.add(layerthree);
-			
-		//animation
-		var angularSpeed = Math.PI / -6;
-		var animthree = new Kinetic.Animation(function(frame) {
-			var angleDiff = frame.timeDiff * angularSpeed / 1000;
-			var time = frame.time;
-			var newY = -100 * time / 1000;
+			// add the layer to the stage
+			stagethree.add(layerthree);
+				
+			//animation
+			var angularSpeed = Math.PI / -6;
+			var animthree = new Kinetic.Animation(function(frame) {
+				var angleDiff = frame.timeDiff * angularSpeed / 1000;
+				var time = frame.time;
+				var newY = -100 * time / 1000;
 
-			bottlewithhand.setY(newY + 200);
+				bottlewithhand.setY(newY + 200);
 
-			if(bottlewithhand.attrs.y < 130)
-			{
-				bottlewithhand.rotate(angleDiff);
-				if(bottlewithhand.attrs.rotation < -0.4)
+				if(bottlewithhand.attrs.y < 125)
 				{
-					animthree.stop();
-					dropSoda();
+					bottlewithhand.rotate(angleDiff);
+					if(bottlewithhand.attrs.rotation < -0.4)
+					{
+						animthree.stop();
+						$("#container3").css("display", "none");
+						$("#rotatedhandwithbottle").css("display", "block");
+						ShotTheCap();
+						DropSoda();
+					}
 				}
-			}
-		}, layerthree);
+			}, layerthree);
 
-		animthree.start();
-		};
-		imageObjthree.src = 'http://69.46.20.44/images/handwithbottle.png';
-		  
-		});
+			animthree.start();
+			};
+			imageObjthree.src = 'http://69.46.20.44/images/handwithbottle2.png';
+			  
+		}
 		
 		
 		
 		</script>
 		<script type="text/javascript">
 		
-			
+		
+
 		var swipe = document.getElementById('slider'),
 		swipe_nav = document.getElementById('swipe_nav'),
 		swipe_title = document.getElementById('swipe_title');
@@ -516,10 +586,10 @@
 				document.getElementById('swipe_nav_'+ (ind+1)).className = "active";
 				}
 				if (ind == 2) {
-				document.getElementById('swipe_nav_'+ (1)).className = "active";
+				document.getElementById('swipe_nav_'+ (3)).className = "active";
 				}
 				if (ind == 3) {
-				document.getElementById('swipe_nav_'+ (2)).className = "active";
+				document.getElementById('swipe_nav_'+ (1)).className = "active";
 				}
 			}
 		});
@@ -537,11 +607,29 @@
 				mySwipe.slide(x, 500);
 			}
 		}
+
+		function GotoPledge(){
+			$.scrollTo($('#charities'), 800);
+		}
+		function GotoGoldenticket(){
+			$.scrollTo($('#goldenticket'), 800);
+		}
+		function GotoAvettbros(){
+			$.scrollTo($('#avettbros'), 800);
+		}
+		function GotoMerch(){
+			$.scrollTo($('#merch'), 800);
+		}
+		function GotoFooter(){
+			$.scrollTo($('#footer'), 800);
+		}
 		
 		$("#header").pin({containerSelector: "body", minWidth: 1140});
 		
 		
 		
 		</script>
+	</body>
+</html>
 	</body>
 </html>
