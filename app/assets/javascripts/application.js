@@ -23,3 +23,5 @@
 //= kinetic-v4.5.2
 //= jquery.parallax-1.1.3
 //= jquery.pin.js
+//= swipe.js
+//= bootstrap.min
