@@ -3,7 +3,7 @@
 		<title>Cheerwine</title>
 		
 		
-		<% if @users_browser != "iphone" %>
+		<% if @users_browser != "iphone" || @user_borwser != "ipad" %>
 		<script type="text/javascript">
 		$(document).ready(function(){
 			
@@ -32,9 +32,20 @@
 		})
 		</script>
 		<% end %>
+
+
 	</head>
 
 	<body>
+		
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 		<div class="content" id="header">
 			<div class="holder">
 			<table>
@@ -46,18 +57,27 @@
 					<td class="logo"></td>
 					<td style="width:293px"><a onclick="GotoMerch()" style="margin-left: 147px;">Merchandise</a></td>
 					<td><a onclick="GotoFooter()">Enter Sweepstakes</a></td>
+					<td style="width:131px">
+						<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="light" data-action="like" style="position:absolute;margin-top: -10px;"></div>
+						
+						
+					</td>
 				</tr>
 			</table>
 			</div>
+			
 		</div>
+		
 		<div class="sodaflow">
 			<div class="holder">
-				<input type="button" id="flowfrombottle" value="flowfrombottle" style="display:none"/>
-				<div id="container"></div>
-				<div id="container2"></div>	
-				<div id="container3"></div>	
-				<div id="rotatedhandwithbottle"></div>		
-				<div id="cap"></div>					
+				<div id="animations">
+					<input type="button" id="flowfrombottle" value="flowfrombottle" style="display:none"/>
+					<div id="container"></div>
+					<div id="container2"></div>	
+					<div id="container3"></div>	
+					<div id="rotatedhandwithbottle"></div>		
+					<div id="cap"></div>					
+				</div>
 			</div>
 			<div class="content" id="avonstage">
 				<div class="holder">
@@ -66,7 +86,7 @@
 					<div class="band"></div>
 					<div class="black"></div>
 					<p>
-						Cheerwine and the Avett Brothers are teaming up again for the Legendary Giveback II, 
+						Cheerwine and The Avett Brothers are teaming up again for the Legendary Giveback II, 
 						a concert for the greatest and most generous fans in the world. Just like last year,
 						you can expect a Legendary night for fans to benefit several local charities.
 						<br /><br />
@@ -80,35 +100,42 @@
 			<div class="content" id="charities">
 				<div class="holder">
 					<div class="giveback"></div>
-					<p>The Legendary Giveback is about more than just legendary music. It's about giving back to the community.  
+					<p style="font-size:15px; margin-top: 201px; margin-left: 189px;">The Legendary Giveback is about more than just legendary music. It's about giving back to the community.  
 					This year, Cheerwine and the Avett Brothers have decided on three organizations to benefit from the Legendary Giveback.</p>
 					<div class="bird"></div>
 					<a class="pick fancybox" rel="group" id="pledge" href="#pledgeform"></a>
 					
 					<div id="pledgeform" style="padding: 10px 20px; display: none;">
-						<h1 style="margin-top: 5px; font-family: neuemed; font-size: 32px; text-align: center;" id="logo">Pledge</h1>
-						<form accept-charset="UTF-8" action="/home/pledge" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="?"><input name="authenticity_token" type="hidden" value="MwGzcynw1nCKwh4b1Kh4o+yVzC/iB45D1l27J3iIctI="></div>
+						<h1 style="margin-top: 5px; font-family: neuemed; font-size: 32px; text-align: center; color:#ba183d" id="logo">Pledge</h1>
+						<form id="pledgeformsec" accept-charset="UTF-8" action="/home/pledge" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="?"><input name="authenticity_token" type="hidden" value="MwGzcynw1nCKwh4b1Kh4o+yVzC/iB45D1l27J3iIctI="></div>
 							<table id="pledgeformtable">
 								<tbody><tr>
-									<td style="width:100px">Name</td>
+									<td style="width:270px; padding-right:10px" align="right">Name</td>
 									<td><input id="pledgename" name="pledgename" type="text"></td>
 								</tr>
 								<tr>
-									<td>E-Mail</td>
+									<td style="padding-right:10px" align="right">E-Mail</td>
 									<td><input id="pledgeemail" name="pledgeemail" type="text"></td>
 								</tr>
 								<tr>
-									<td>Hours Pledged</td>
+									<td style="padding-right:10px" align="right">Hours to Pledge Max 50hrs</td>
 									<td><input id="hourspledged" name="hourspledged" type="text"></td>
 								</tr>
 								<tr>
-									<td>Charity to Pledge to</td>
+									<td style="padding-right:10px" align="right">Charity to Pledge to</td>
 									<td><input id="charitytopledge" name="charitytopledge" type="text"></td>
 								</tr>
 							</tbody></table>
-							<input class="btn btn-info" name="commit" style="margin: 10px 0px 0px 120px;" type="submit" value="Submit">
+							<div id="submitbtn" onclick="formSubmit()"></div>
 						</form>	
 					</div>
+
+					<script>
+					function formSubmit()
+					{
+						document.getElementById("pledgeformsec").submit();
+					}
+					</script>
 	
 					<div id='slider' class='swipe'>
 						<div class='swipe-wrap'>
@@ -148,33 +175,41 @@
 					<a class="pick fancybox" id="twitter" href="#redeemform"></a>
 					
 					<div id="redeemform" style="padding: 10px 20px; display: none;">
-						<h1 style="margin-top: 5px; font-family: neuemed; font-size: 32px; text-align: center;" id="logo">Redeem</h1>
-						<form accept-charset="UTF-8" action="/home/redeem" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="?"><input name="authenticity_token" type="hidden" value="MwGzcynw1nCKwh4b1Kh4o+yVzC/iB45D1l27J3iIctI="></div>
-							<table id="formtable">
+						<h1 style="margin-top: 5px; font-family: neuemed; font-size: 32px; text-align: center; color:#ba183d" id="logo">Redeem</h1>
+						<form id="redeemformsec" accept-charset="UTF-8" action="/home/redeem" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="?"><input name="authenticity_token" type="hidden" value="MwGzcynw1nCKwh4b1Kh4o+yVzC/iB45D1l27J3iIctI="></div>
+							<table id="redeemformtable">
 								<tbody><tr>
-									<td style="width:100px">Name</td>
+									<td style="width:124px; padding-right:10px" align="right">Name</td>
 									<td><input id="redeemname" name="redeemname" type="text"></td>
 								</tr>
 								<tr>
-									<td>E-Mail</td>
+									<td style="width:100px; padding-right:10px" align="right">E-Mail</td>
 									<td><input id="redeememail" name="redeememail" type="text"></td>
 								</tr>
 								<tr>
-									<td>City</td>
+									<td style="width:100px; padding-right:10px" align="right">City</td>
 									<td><input id="city" name="city" type="text"></td>
 								</tr>
 								<tr>
-									<td>State</td>
-									<td><input id="state" name="state" type="text"></td>
+									<td style="width:100px; padding-right:10px" align="right">State</td>
+									<td><input id="state" name="state" type="text" ></td>
 								</tr>
 								<tr>
-									<td>Code</td>
+									<td style="width:100px; padding-right:10px" align="right">Code</td>
 									<td><input id="code" name="code" type="text"></td>
 								</tr>
 							</tbody></table>
-							<input class="btn btn-info" name="commit" style="margin: 10px 0px 0px 120px;" type="submit" value="Submit">
+							<div id="submitbtn" onclick="formSubmit2()"></div>
 						</form>	
 					</div>
+
+					<script>
+					function formSubmit2()
+					{
+						document.getElementById("redeemformsec").submit();
+					}
+					</script>
+
 				</div>
 			</div>
 			<div class="content" id="cwsection">
@@ -190,7 +225,7 @@
 					drink of good cheer.</p>
 					<div class="bottle"></div>
 					<div class="botcord"></div>
-					<div class="pick" id="visit" onclick="javascript:location.href='#'"></div>
+					<div class="pick" id="visit" onclick="javascript:location.href='http://www.cheerwine.com'"></div>
 				</div>
 			</div>
 			<div class="content" id="avettbros">
@@ -226,7 +261,7 @@
 					<p>Get the gear that shows you care. Don’t miss out on the chance to own a piece of the 
 					Legendary Giveback II. We’ve got hoodies, T-Shirts and hats that you can rock, as 
 					well as posters and other cool stuff that also make great gifts.</p>
-					<div class="pick" id="shop" onclick="javascript:location.href='#'"></div>
+					<div class="pick" id="shop" onclick="javascript:location.href='http://www.cheerwine.com/catalog/category/view/id/6#merch'"></div>
 				</div>
 			</div>
 			<div class="content" id="footer">
@@ -241,7 +276,7 @@
 					<p>Get codes from specially marked 12 packs, 2-liter bottles and 20 oz. bottles, then 
 					play Spin to Win on our Facebook page (Facebook.com/Cheerwine) for a chance to 
 					win VIP tickets to the Legendary Giveback II or thousands of other great prizes.</p>
-					<div class="pick" id="likeenter" onclick="javascript:location.href='#'"></div>
+					<div class="pick" id="likeenter" onclick="javascript:location.href='http://www.facebook.com/cheerwine'"></div>
 				</div>
 			</div>
 		</div>
@@ -516,8 +551,8 @@
 				x: 145,
 				y: 250,
 				image: imageObjthree,
-				width: 415,
-				height: 523,
+				width: 390,
+				height: 607,
 				offset: [50, 50]
 			});
 
@@ -539,7 +574,7 @@
 				if(bottlewithhand.attrs.y < 125)
 				{
 					bottlewithhand.rotate(angleDiff);
-					if(bottlewithhand.attrs.rotation < -0.4)
+					if(bottlewithhand.attrs.rotation < -0.35)
 					{
 						animthree.stop();
 						$("#container3").css("display", "none");
@@ -552,7 +587,7 @@
 
 			animthree.start();
 			};
-			imageObjthree.src = 'http://69.46.20.44/images/handwithbottle2.png';
+			imageObjthree.src = 'http://69.46.20.44/images/handwithbottle_hor.png';
 			  
 		}
 		
