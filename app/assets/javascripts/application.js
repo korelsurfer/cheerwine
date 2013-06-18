@@ -24,4 +24,3 @@
 //= kinetic-v4.5.2
 //= jquery.parallax-1.1.3.js
 //= jquery.pin.js
-//= require_tree .
