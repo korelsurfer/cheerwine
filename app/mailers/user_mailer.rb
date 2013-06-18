@@ -5,7 +5,7 @@ class UserMailer < ActionMailer::Base
     @name = name
     @hourspledged = hourspledged
     @charitytopledge = charitytopledge
-    mail(:to => "yoktars@gmail.com", :subject => "Pledged!")    
+    mail(:to => "drinkcheerwine1917@gmail.com", :subject => "Pledged!")    
   end
 
   def redeem_mail(name, email, city, state, code)
@@ -14,6 +14,6 @@ class UserMailer < ActionMailer::Base
     @city = city
     @state = state
     @code = code
-    mail(:to => "yoktars@gmail.com", :subject => "Redeem!")    
+    mail(:to => "drinkcheerwine1917@gmail.com", :subject => "Redeem!")    
   end
 end
