@@ -17,7 +17,6 @@
 //= require jquery.fancybox-buttons
 //= require jquery.fancybox-media
 //= require jquery.fancybox-thumbs
-//= require jquery.localscroll-1.2.7
 //= require jquery.scrollTo-1.4.3.1-min
 //= require jquery.spritely-0.6
 //= require kinetic-v4.5.2
