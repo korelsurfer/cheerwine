@@ -12,15 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= jquery-1.9.0.min
 //= jquery.fancybox
 //= jquery.fancybox.pack
 //= jquery.fancybox-buttons
 //= jquery.fancybox-media
 //= jquery.fancybox-thumbs
-//= jquery.localscroll-1.2.7-min
-//= jquery.scrollTo-1.4.3.1-min.js
+//= jquery.localscroll-1.2.7
+//= jquery.scrollTo-1.4.3.1-min
 //= jquery.spritely-0.6
 //= kinetic-v4.5.2
-//= jquery.parallax-1.1.3.js
+//= jquery.parallax-1.1.3
 //= jquery.pin.js

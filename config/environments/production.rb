@@ -47,7 +47,7 @@ Cheerwine::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += ["jquery.parallax-1.1.3.js","jquery.scrollTo-1.4.2-min.js", "jquery.pin.js"]
+  #config.assets.precompile += ["jquery.parallax-1.1.3.js","jquery.scrollTo-1.4.2-min.js", "jquery.pin.js"]
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
