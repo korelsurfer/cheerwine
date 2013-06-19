@@ -825,12 +825,21 @@ width: 377px;
 #pledgeform
 {
 	width: 452px;
+	text-align: center;
 
+}
+
+#pledgeform span
+{
+	font-size:13px;
+	font-family: 'neuemed';
+	color:#aba49c;
+	text-align: center;
 }
 
 #pledgeformtable tr>td
 {
-	
+
 }
 
 #pledgeformtable
