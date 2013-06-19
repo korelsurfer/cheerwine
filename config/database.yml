@@ -3,7 +3,7 @@ development: &dev
   database: cheerwine_development
   encoding: utf8
   username: cheerwine
-  password: 
+  password: cheerwineadmin
   pool: 25
   timeout: 5000
 
@@ -15,7 +15,7 @@ test: &test
   database: cheerwine_test
   encoding: utf8
   username: cheerwine
-  password: 
+  password: cheerwineadmin
   pool: 5
   timeout: 5000
   allow_concurrency: true
