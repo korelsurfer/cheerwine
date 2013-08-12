@@ -652,6 +652,12 @@ width: 377px;
 	background-image: url("pledgepick.png");
 }
 
+#buytix
+{
+	background-image: url("buyTix.png");
+	margin-top:350px;
+}
+
 #twitter
 {
 	background-image: url("twitterpick.png");

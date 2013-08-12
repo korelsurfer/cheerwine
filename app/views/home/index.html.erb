@@ -38,6 +38,7 @@
 
 	<body>
 		
+		
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
 		  var js, fjs = d.getElementsByTagName(s)[0];
@@ -46,26 +47,27 @@
 		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
+		
+
 		<div class="content" id="header">
 			<div class="holder">
-			<table>
-				<tr>
+				<div class="fb-like" data-href="http://cheerwine.herokuapp.com/" data-width="450" data-layout="button_count" data-show-faces="true" data-send="false" style="position:absolute; margin-left:992px; margin-top:9px"></div>
+				
 
-					<td style="width:88px"><a onclick="GotoPledge()">Pledge</a></td>
-					<td style="width:133px"><a onclick="GotoGoldenticket()">Redeem Can</a></td>
-					<td style="width:171px"><a onclick="GotoAvettbros()">The Avett Brothers</a></td>
-					<td class="logo"></td>
-					<td style="width:293px"><a onclick="GotoMerch()" style="margin-left: 147px;">Merchandise</a></td>
-					<td><a onclick="GotoFooter()">Enter Sweepstakes</a></td>
-					<td style="width:131px">
-						<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="light" data-action="like" style="position:absolute;margin-top: -10px;"></div>
-						
-						
-					</td>
-				</tr>
-			</table>
+				<table>
+					<tr>
+
+						<td style="width:88px"><a onclick="GotoPledge()">Pledge</a></td>
+						<td style="width:133px"><a onclick="GotoGoldenticket()">Redeem Can</a></td>
+						<td style="width:171px"><a onclick="GotoAvettbros()">The Avett Brothers</a></td>
+						<td class="logo"></td>
+						<td style="width:293px"><a onclick="GotoMerch()" style="margin-left: 147px;">Merchandise</a></td>
+						<td style="width: 174px;"><a onclick="GotoFooter()">Enter Sweepstakes</a></td>
+						<td><a href="http://www.ticketmaster.com/event/0E004B05EF66881E">Buy Tickets</a></td>
+					</tr>
+				</table>
+
 			</div>
-			
 		</div>
 		
 		<div class="sodaflow">
@@ -104,7 +106,7 @@
 					to gain Livestream access to the Legendary Giveback II concert.</p>
 					<div class="bird"></div>
 					<a class="pick fancybox" rel="group" id="pledge" href="#pledgeform"></a>
-					
+					<a class="pick" id="buytix" href="http://www.ticketmaster.com/event/0E004B05EF66881E" target="_blank"></a>
 					<div id="pledgeform" style="padding: 10px 20px; display: none;">
 						<h1 style="margin-top: 5px; font-family: neuemed; font-size: 32px; text-align: center; color:#ba183d" id="logo">Pledge</h1>
 						<form id="pledgeformsec" accept-charset="UTF-8" action="/home/pledge" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="?"><input name="authenticity_token" type="hidden" value="MwGzcynw1nCKwh4b1Kh4o+yVzC/iB45D1l27J3iIctI="></div>
