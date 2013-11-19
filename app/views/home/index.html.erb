@@ -108,29 +108,8 @@
 					<a class="pick fancybox" rel="group" id="pledge" href="#pledgeform"></a>
 					<a class="pick" id="buytix" href="http://www.ticketmaster.com/event/0E004B05EF66881E" target="_blank"></a>
 					<div id="pledgeform" style="padding: 10px 20px; display: none;">
-						<h1 style="margin-top: 5px; font-family: neuemed; font-size: 32px; text-align: center; color:#ba183d" id="logo">Pledge</h1>
-						<form id="pledgeformsec" accept-charset="UTF-8" action="/home/pledge" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="?"><input name="authenticity_token" type="hidden" value="MwGzcynw1nCKwh4b1Kh4o+yVzC/iB45D1l27J3iIctI="></div>
-							<table id="pledgeformtable">
-								<tbody><tr>
-									<td style="width:270px; padding-right:10px" align="right">Name</td>
-									<td><input id="pledgename" name="pledgename" type="text"></td>
-								</tr>
-								<tr>
-									<td style="padding-right:10px" align="right">E-Mail</td>
-									<td><input id="pledgeemail" name="pledgeemail" type="text"></td>
-								</tr>
-								<tr>
-									<td style="padding-right:10px" align="right">Hours to Pledge Max 50hrs</td>
-									<td><input id="hourspledged" name="hourspledged" type="text"></td>
-								</tr>
-								<tr>
-									<td style="padding-right:10px" align="right">Charity to Pledge to</td>
-									<td><input id="charitytopledge" name="charitytopledge" type="text"></td>
-								</tr>
-							</tbody></table>
-							<div id="submitbtn" onclick="formSubmit()"></div><br/>
-							<span>By donating your time you will receive Livestream access to the Legendary Giveback II concert.</span>
-						</form>	
+						<h1 style="margin-top: 5px; font-family: neuemed; font-size: 25px; text-align: center; color:#ba183d" id="logo">Pledge</h1>
+						<p style="font-size:15px; color:#d5d1c8">The Legendary Giveback II has concluded. Thank you to everyone who pledged their time.</p>
 					</div>
 
 					<script>
@@ -177,35 +156,9 @@
 					<div class="oval"></div>
 					<a class="pick fancybox" id="twitter" href="#redeemform"></a>
 					
-					<div id="redeemform" style="padding: 10px 20px; display: none;">
-						<h1 style="margin-top: 5px; font-family: neuemed; font-size: 32px; text-align: center; color:#ba183d" id="logo">Redeem</h1>
-						<form id="redeemformsec" accept-charset="UTF-8" action="/home/redeem" method="post" style="text-align: center;"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="?"><input name="authenticity_token" type="hidden" value="MwGzcynw1nCKwh4b1Kh4o+yVzC/iB45D1l27J3iIctI="></div>
-							<table id="redeemformtable">
-								<tbody><tr>
-									<td style="width:124px; padding-right:10px" align="right">Name</td>
-									<td><input id="redeemname" name="redeemname" type="text"></td>
-								</tr>
-								<tr>
-									<td style="width:100px; padding-right:10px" align="right">E-Mail</td>
-									<td><input id="redeememail" name="redeememail" type="text"></td>
-								</tr>
-								<tr>
-									<td style="width:100px; padding-right:10px" align="right">City</td>
-									<td><input id="city" name="city" type="text"></td>
-								</tr>
-								<tr>
-									<td style="width:100px; padding-right:10px" align="right">State</td>
-									<td><input id="state" name="state" type="text" ></td>
-								</tr>
-								<tr>
-									<td style="width:100px; padding-right:10px" align="right">Code</td>
-									<td><input id="code" name="code" type="text"></td>
-								</tr>
-							</tbody></table>
-							<div id="submitbtn" onclick="formSubmit2()"></div>
-							<br />
-							<a href="http://www.cfapromo.com/cheerwinecan" style="color:#ba183d; font-family: neuemed;" target="_blank">Official Rules</a>
-						</form>	
+					<div id="redeemform" style="padding: 10px 20px; display: none; text-align:center">
+						<h1 style="margin-top: 5px; font-family: neuemed; font-size: 25px; text-align: center; color:#ba183d" id="logo">Redeem</h1>
+						<p style="font-size:15px; color:#d5d1c8">The Legendary Giveback II has concluded. Thank you for participating and redeeming codes.</p>
 					</div>
 
 					<script>
@@ -243,8 +196,8 @@
 					Scott and Seth Avett hail from the heart of Cheerwine Country, growing up in 
 					Concord, North Carolina. The Avett boys unique style combines folk, country, 
 					bluegrass, rock and pop with a jab of punk-style dynamics here and there.<br /><br />
-					The Avett’s are backed by Bob Crawford on stand-up bass, Joe Kwon on cello and 
-					Mike Marsh on drums.</p>
+					The Avett’s are backed by Bob Crawford on stand-up bass, Joe Kwon on cello, Mike Marsh on drums, and Paul Defiglia on keyboard and organ.
+				</p>
 					<a href="https://twitter.com/theavettbros" class="socialmedia"><img src="<%= asset_path('twitter.png') %>"/></a>
 					<a href="https://www.facebook.com/theavettbrothers?fref=ts" class="socialmedia" id="facebook"><img src="<%= asset_path('facebook.png') %>"/></a>
 					<a href="http://www.youtube.com/user/theavettbrothers" class="socialmedia" id="youtube"><img src="<%= asset_path('youtube.png') %>"/></a>
